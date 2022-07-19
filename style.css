@@ -1,0 +1,29 @@
+main{
+ /*   display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;*/
+}
+#container{
+    background-color: #f8f7ff;
+
+}
+section{
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.btns{
+    display:flex;
+    justify-content: space-around;
+    padding:2% 3%;
+}
+.btns button{
+    background-color: red;
+    padding:2% 3%;
+    border:none;
+    border-radius: 10px;
+}
+.btns button:hover{
+    background-color: rgb(205, 105, 105);
+    cursor:pointer;
+}
