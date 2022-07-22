@@ -90,24 +90,35 @@ let celebs = [
    
 ]
 
-
+let button = document.querySelector('#btn0')
 let button1 = document.querySelector('#btn1')
 let button2 = document.querySelector('#btn2')
 let button3 = document.querySelector('#btn3')
 let button4 = document.querySelector('#btn4')
+
 document.addEventListener('DOMContentLoaded',showItem)
 let mainContainer = document.querySelector('main')
 let subContainer = document.querySelector('section')
 function showItem(){
-    celebs.forEach((celeb)=>{
+
+    let celebContainer = celebs.map((celeb)=>{
+        return `<div id="container">
+        <h3>${celeb.firstName}</h3>
+        <img src="${celeb.imageSrc}" width="200">
+    </div>`
+    })
+    console.log(celebContainer)
+    subContainer.innerHTML = celebContainer
+    /*celebs.forEach((celeb)=>{
         subContainer.innerHTML +=  `<div id="container">
         <h3>${celeb.firstName}</h3>
         <img src="${celeb.imageSrc}" width="200">
     </div>`
     mainContainer.append(subContainer)
-    })
+    })*/
   
 }
+showItem()
 
 
 function showZendaya(){
@@ -176,3 +187,5 @@ function showNicki(){
  }
 
  button4.addEventListener('click',showAriana)
+ 
+ button.addEventListener('click',showItem)
